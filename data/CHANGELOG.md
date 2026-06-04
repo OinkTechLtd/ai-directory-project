@@ -5,3 +5,6 @@
 - Добавлены: TatNet T1000, Coder-GoAI (OinkTech Ltd), GitHub Copilot, Cursor, Claude, ChatGPT, YandexGPT, GigaChat, Tabnine, Gemini, Windsurf, Perplexity
 - Запущен краулер 24/7
 - Настроены GitHub Actions workflows: ежедневная проверка + новогоднее обновление
+
+## 2026-06-04
+- Краулер проверил 12 инструментов. Активных: 9. Дата: 2026-06-04T23:02:53.155Z
