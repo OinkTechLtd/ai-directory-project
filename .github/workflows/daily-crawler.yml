@@ -84,10 +84,10 @@ jobs:
     steps:
       - name: 🔔 Пинг Google
         run: |
-          BASE="${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}"
+          BASE="${{ secrets.BASE_URL || 'https://ai-directory.tatnet.app' }}"
           curl -s "https://www.google.com/ping?sitemap=${BASE}/sitemap.xml" || echo "Google ping: OK (или нет ответа)"
 
       - name: 🔔 Пинг Яндекс
         run: |
-          BASE="${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}"
+          BASE="${{ secrets.BASE_URL || 'https://ai-directory.tatnet.app' }}"
           curl -s "https://webmaster.yandex.ru/ping?sitemap=${BASE}/sitemap.xml" || echo "Yandex ping: OK"
