@@ -1,0 +1,16 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI Directory — Каталог ИИ-инструментов",
+  "url": "https://ai-directory.example.com",
+  "description": "Глобальный каталог ИИ-инструментов для разработчиков и пользователей. Автообновление каждый день.",
+  "inLanguage": [
+    "ru",
+    "en"
+  ],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://ai-directory.example.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}

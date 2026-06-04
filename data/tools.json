@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "lastUpdated": "2026-06-05T00:00:00Z",
+    "totalTools": 42,
+    "version": "2026.06",
+    "crawlerStatus": "active"
+  },
+  "categories": {
+    "developers": {
+      "label": "Для разработчиков",
+      "icon": "💻",
+      "description": "ИИ-инструменты для программистов: автодополнение кода, ревью, дебаггинг"
+    },
+    "users": {
+      "label": "Для пользователей",
+      "icon": "🧑‍💼",
+      "description": "ИИ-инструменты для повседневных задач: текст, изображения, продуктивность"
+    },
+    "startups": {
+      "label": "Стартапы",
+      "icon": "🚀",
+      "description": "Новые ИИ-стартапы и перспективные проекты"
+    }
+  },
+  "tools": [
+    {
+      "id": "tatnet-t1000",
+      "name": "T1000 by TatNet",
+      "slug": "tatnet-t1000",
+      "url": "https://t1000.tatnet.ru",
+      "website": "https://tatnet.dev",
+      "category": "startups",
+      "tags": ["татарстан", "россия", "llm", "assistant"],
+      "description": "Татарский ИИ-ассистент от TatNet.dev из Республики Татарстан. Поддерживает татарский и русский языки.",
+      "status": "active",
+      "origin": "Казань, Татарстан, Россия",
+      "addedAt": "2026-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true,
+      "logo": "https://tatnet.dev/logo.png"
+    },
+    {
+      "id": "coder-goai",
+      "name": "Coder-GoAI",
+      "slug": "coder-goai",
+      "url": "https://coder-goai.lovable.app",
+      "website": "https://oinktechltd.com",
+      "category": "developers",
+      "tags": ["coding", "assistant", "ide", "oinktech"],
+      "description": "ИИ-помощник для разработчиков от OinkTech Ltd. Умное дополнение кода и архитектурные советы.",
+      "status": "active",
+      "origin": "OinkTech Ltd",
+      "addedAt": "2026-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true,
+      "logo": "https://coder-goai.lovable.app/logo.png"
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "slug": "github-copilot",
+      "url": "https://github.com/features/copilot",
+      "category": "developers",
+      "tags": ["coding", "autocomplete", "github", "microsoft"],
+      "description": "ИИ-помощник для написания кода прямо в редакторе. Поддерживает все популярные IDE.",
+      "status": "active",
+      "origin": "Microsoft / GitHub",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "cursor-ai",
+      "name": "Cursor",
+      "slug": "cursor",
+      "url": "https://cursor.com",
+      "category": "developers",
+      "tags": ["ide", "coding", "ai-editor"],
+      "description": "ИИ-редактор кода с встроенным ChatGPT. Революционный подход к разработке.",
+      "status": "active",
+      "origin": "Anysphere",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude",
+      "slug": "claude",
+      "url": "https://claude.ai",
+      "category": "users",
+      "tags": ["assistant", "writing", "analysis", "coding"],
+      "description": "Умный ИИ-ассистент от Anthropic. Отличается глубоким пониманием контекста и точными ответами.",
+      "status": "active",
+      "origin": "Anthropic",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "slug": "chatgpt",
+      "url": "https://chatgpt.com",
+      "category": "users",
+      "tags": ["assistant", "writing", "images", "openai"],
+      "description": "Самый известный ИИ-чатбот в мире от OpenAI. Поддерживает текст, изображения, голос.",
+      "status": "active",
+      "origin": "OpenAI",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "yandex-gpt",
+      "name": "YandexGPT",
+      "slug": "yandexgpt",
+      "url": "https://ya.ru/ai/gpt",
+      "category": "users",
+      "tags": ["assistant", "russia", "yandex", "русский"],
+      "description": "Российский ИИ-ассистент от Яндекса. Отлично работает с русским языком.",
+      "status": "active",
+      "origin": "Яндекс, Россия",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "gigachat",
+      "name": "GigaChat",
+      "slug": "gigachat",
+      "url": "https://gigachat.devices.sberbank.ru",
+      "category": "users",
+      "tags": ["assistant", "russia", "sber", "русский"],
+      "description": "ИИ-ассистент от Сбера. Мультимодальный, хорошо понимает русский язык и контекст.",
+      "status": "active",
+      "origin": "Сбер, Россия",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": false
+    },
+    {
+      "id": "tabnine",
+      "name": "Tabnine",
+      "slug": "tabnine",
+      "url": "https://www.tabnine.com",
+      "category": "developers",
+      "tags": ["autocomplete", "coding", "ide"],
+      "description": "ИИ-автодополнение кода с локальной моделью. Безопасно для корпоративного использования.",
+      "status": "active",
+      "origin": "Tabnine",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": false
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "slug": "gemini",
+      "url": "https://gemini.google.com",
+      "category": "users",
+      "tags": ["assistant", "google", "multimodal"],
+      "description": "Мультимодальный ИИ от Google. Интегрирован с сервисами Google Workspace.",
+      "status": "active",
+      "origin": "Google DeepMind",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "slug": "windsurf",
+      "url": "https://codeium.com/windsurf",
+      "category": "developers",
+      "tags": ["ide", "coding", "agentic"],
+      "description": "Агентный ИИ-редактор от Codeium. Выполняет задачи самостоятельно, не только дополняет код.",
+      "status": "active",
+      "origin": "Codeium",
+      "addedAt": "2025-06-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "slug": "perplexity",
+      "url": "https://perplexity.ai",
+      "category": "users",
+      "tags": ["search", "research", "web"],
+      "description": "ИИ-поисковик с актуальными ответами из интернета и ссылками на источники.",
+      "status": "active",
+      "origin": "Perplexity AI",
+      "addedAt": "2025-01-01T00:00:00Z",
+      "lastChecked": "2026-06-05T00:00:00Z",
+      "featured": true
+    }
+  ]
+}

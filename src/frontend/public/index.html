@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Directory — Каталог ИИ-инструментов 2026</title>
+  <meta name="description" content="Глобальный каталог ИИ-инструментов для разработчиков и пользователей. Автообновление каждый день. Включает TatNet T1000, Coder-GoAI и сотни других." />
+  <meta name="keywords" content="ИИ инструменты, искусственный интеллект, AI tools, программирование, tatnet, coder-goai, яндекс, россия, татарстан" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ai-directory.example.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Directory — Каталог ИИ-инструментов" />
+  <meta property="og:description" content="Лучшие ИИ для разработчиков и пользователей. Автообновление 24/7." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ai-directory.example.com/" />
+
+  <!-- Yandex Verification placeholder -->
+  <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE" />
+  <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Unbounded:wght@300;600;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #080c14;
+      --surface: #0f1623;
+      --border: #1e2d45;
+      --accent: #00e5ff;
+      --accent2: #7c3aed;
+      --accent3: #f59e0b;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --active: #10b981;
+      --unavail: #ef4444;
+      --redirect: #f59e0b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── Grid background ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,229,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── Header ─── */
+    header {
+      position: relative;
+      z-index: 10;
+      padding: 2rem 2rem 1rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+
+    .bot-status {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .75rem;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: .4rem .8rem;
+      border-radius: 999px;
+    }
+
+    .bot-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--active);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .5; transform: scale(1.4); }
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      position: relative;
+      z-index: 5;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 300;
+      font-size: clamp(1.8rem, 6vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: -.03em;
+    }
+
+    .hero h1 span {
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent2) 60%, var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+      font-size: .9rem;
+    }
+
+    /* ─── Search ─── */
+    .search-wrap {
+      max-width: 560px;
+      margin: 0 auto 3rem;
+      position: relative;
+    }
+
+    #search {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .85rem 1rem .85rem 3rem;
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      font-size: .9rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    #search:focus { border-color: var(--accent); }
+    #search::placeholder { color: var(--muted); }
+
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    /* ─── Tabs ─── */
+    .tabs {
+      display: flex;
+      gap: .5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 5;
+    }
+
+    .tab {
+      padding: .5rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      font-family: 'Space Mono', monospace;
+      font-size: .8rem;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+
+    .tab:hover { border-color: var(--accent); color: var(--text); }
+    .tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg);
+      font-weight: 700;
+    }
+
+    .tab .badge {
+      background: rgba(0,0,0,.2);
+      border-radius: 999px;
+      padding: .1rem .4rem;
+      font-size: .7rem;
+    }
+
+    /* ─── Grid ─── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+      padding: 0 2rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* ─── Card ─── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+      transition: border-color .2s, transform .2s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,229,255,.03), transparent);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card:hover::before { opacity: 1; }
+
+    .card.featured { border-color: rgba(0,229,255,.3); }
+    .card.unavailable { opacity: .7; border-color: rgba(239,68,68,.3); }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: .8rem;
+      gap: .5rem;
+    }
+
+    .card-name {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--text);
+    }
+
+    .card-badges {
+      display: flex;
+      gap: .3rem;
+      flex-wrap: wrap;
+    }
+
+    .badge-status {
+      font-size: .65rem;
+      padding: .2rem .5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      letter-spacing: .05em;
+    }
+
+    .badge-status.active { background: rgba(16,185,129,.2); color: var(--active); }
+    .badge-status.unavailable { background: rgba(239,68,68,.15); color: var(--unavail); }
+    .badge-status.redirected { background: rgba(245,158,11,.15); color: var(--redirect); }
+
+    .badge-featured {
+      font-size: .65rem;
+      padding: .2rem .5rem;
+      border-radius: 4px;
+      background: rgba(0,229,255,.15);
+      color: var(--accent);
+      letter-spacing: .05em;
+    }
+
+    .card-origin {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-bottom: .6rem;
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+    }
+
+    .card-desc {
+      font-size: .8rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: .8rem;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      margin-bottom: .8rem;
+    }
+
+    .tag {
+      font-size: .65rem;
+      padding: .2rem .5rem;
+      border-radius: 4px;
+      background: rgba(124,58,237,.15);
+      color: #a78bfa;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .75rem;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid rgba(0,229,255,.3);
+      padding: .3rem .8rem;
+      border-radius: 6px;
+      transition: all .2s;
+    }
+
+    .card-link:hover { background: var(--accent); color: var(--bg); }
+
+    .unavail-note {
+      font-size: .7rem;
+      color: var(--unavail);
+      margin-top: .5rem;
+      display: none;
+    }
+
+    .card.unavailable .unavail-note { display: block; }
+
+    /* ─── Stats bar ─── */
+    .stats {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      padding: 1.5rem 2rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 5;
+    }
+
+    .stat { text-align: center; }
+    .stat-val {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--accent);
+    }
+    .stat-lbl { font-size: .7rem; color: var(--muted); margin-top: .2rem; }
+
+    /* ─── Empty state ─── */
+    .empty {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--muted);
+      grid-column: 1 / -1;
+    }
+
+    /* ─── Loader ─── */
+    .loader {
+      text-align: center;
+      padding: 4rem;
+      color: var(--accent);
+      font-family: 'Unbounded', sans-serif;
+      animation: blink 1.2s infinite;
+      grid-column: 1 / -1;
+    }
+
+    @keyframes blink {
+      50% { opacity: .3; }
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      position: relative;
+      z-index: 5;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: .75rem;
+      line-height: 2;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ─── Highlight (TATNET / GOAI) ─── */
+    .card[data-id="tatnet-t1000"],
+    .card[data-id="coder-goai"] {
+      border-color: var(--accent3);
+      background: linear-gradient(135deg, #1a1208, var(--surface));
+    }
+
+    .card[data-id="tatnet-t1000"]::after,
+    .card[data-id="coder-goai"]::after {
+      content: '⭐ Spotlighted';
+      position: absolute;
+      top: .6rem;
+      right: .6rem;
+      font-size: .6rem;
+      color: var(--accent3);
+      letter-spacing: .06em;
+    }
+
+    @media (max-width: 600px) {
+      .grid { padding: 0 1rem 4rem; }
+      header { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">AI DIRECTORY</div>
+  <div class="bot-status">
+    <div class="bot-dot"></div>
+    <span id="bot-version">загрузка...</span>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Все <span>ИИ-инструменты</span><br/>в одном месте</h1>
+  <p>Каталог обновляется каждый день автоматически. Бот проверяет каждый сайт и не удаляет старые инструменты — только помечает их как временно недоступные.</p>
+
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="search" id="search" placeholder="Поиск ИИ... (cursor, copilot, татарстан...)" autocomplete="off" />
+  </div>
+</section>
+
+<div class="stats" id="stats">
+  <div class="stat"><div class="stat-val" id="s-total">—</div><div class="stat-lbl">инструментов</div></div>
+  <div class="stat"><div class="stat-val" id="s-active">—</div><div class="stat-lbl">активных</div></div>
+  <div class="stat"><div class="stat-val" id="s-dev">—</div><div class="stat-lbl">для разработчиков</div></div>
+  <div class="stat"><div class="stat-val" id="s-user">—</div><div class="stat-lbl">для пользователей</div></div>
+  <div class="stat"><div class="stat-val" id="s-start">—</div><div class="stat-lbl">стартапов</div></div>
+</div>
+
+<div class="tabs" id="tabs">
+  <button class="tab active" data-cat="all">🌐 Все</button>
+  <button class="tab" data-cat="developers">💻 Для разработчиков</button>
+  <button class="tab" data-cat="users">🧑‍💼 Для пользователей</button>
+  <button class="tab" data-cat="startups">🚀 Стартапы</button>
+</div>
+
+<main class="grid" id="grid">
+  <div class="loader">ЗАГРУЗКА ДАННЫХ...</div>
+</main>
+
+<footer>
+  <div>🤖 Поисковой робот работает <strong>24/7</strong> и обновляет базу каждый день</div>
+  <div>Индексируется <a href="https://yandex.ru/webmaster" target="_blank">Яндексом</a> и <a href="https://search.google.com/search-console" target="_blank">Google</a></div>
+  <div>Старые инструменты <strong>не удаляются</strong> — если сайт вернётся, статус обновится автоматически</div>
+  <div style="margin-top:.8rem; color: #475569;">
+    <a href="/sitemap.xml">Sitemap</a> · <a href="/robots.txt">robots.txt</a> · 
+    <a href="/api/status">API Статус</a> · <a href="/api/tools">API JSON</a>
+  </div>
+  <div style="margin-top:.5rem; font-size:.65rem;">
+    Версия базы: <span id="db-version">—</span> · Обновлено: <span id="db-updated">—</span>
+  </div>
+</footer>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI Directory",
+  "url": "https://ai-directory.example.com",
+  "description": "Глобальный каталог ИИ-инструментов с автообновлением",
+  "inLanguage": "ru",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://ai-directory.example.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script>
+  const API = '';
+  let allTools = [];
+  let currentCat = 'all';
+  let searchQuery = '';
+
+  async function loadData() {
+    try {
+      const [toolsRes, statusRes] = await Promise.all([
+        fetch(`${API}/api/tools`),
+        fetch(`${API}/api/status`)
+      ]);
+      const { tools, meta } = await toolsRes.json();
+      const status = await statusRes.json();
+
+      allTools = tools;
+
+      // Stats
+      document.getElementById('s-total').textContent = tools.length;
+      document.getElementById('s-active').textContent = tools.filter(t => t.status === 'active').length;
+      document.getElementById('s-dev').textContent = tools.filter(t => t.category === 'developers').length;
+      document.getElementById('s-user').textContent = tools.filter(t => t.category === 'users').length;
+      document.getElementById('s-start').textContent = tools.filter(t => t.category === 'startups').length;
+      document.getElementById('db-version').textContent = meta.version;
+      document.getElementById('db-updated').textContent = new Date(meta.lastUpdated).toLocaleDateString('ru-RU');
+      document.getElementById('bot-version').textContent = `Бот v${meta.version} · 24/7`;
+
+      // Tab badges
+      const cats = {developers:0, users:0, startups:0};
+      tools.forEach(t => { if(cats[t.category] !== undefined) cats[t.category]++; });
+      document.querySelectorAll('.tab[data-cat]').forEach(tab => {
+        const cat = tab.dataset.cat;
+        if(cats[cat] !== undefined) tab.innerHTML += `<span class="badge">${cats[cat]}</span>`;
+      });
+
+      render();
+    } catch(e) {
+      document.getElementById('grid').innerHTML = '<div class="empty">⚠️ Не удалось загрузить данные. Попробуйте обновить страницу.</div>';
+    }
+  }
+
+  function render() {
+    let tools = allTools;
+    if(currentCat !== 'all') tools = tools.filter(t => t.category === currentCat);
+    if(searchQuery) {
+      const q = searchQuery.toLowerCase();
+      tools = tools.filter(t =>
+        t.name.toLowerCase().includes(q) ||
+        t.description.toLowerCase().includes(q) ||
+        (t.tags||[]).some(tag => tag.includes(q)) ||
+        (t.origin||'').toLowerCase().includes(q)
+      );
+    }
+
+    const grid = document.getElementById('grid');
+    if(!tools.length) {
+      grid.innerHTML = '<div class="empty">🔍 Ничего не найдено. Попробуйте другой запрос.</div>';
+      return;
+    }
+
+    grid.innerHTML = tools.map(tool => {
+      const statusLabel = tool.status === 'active' ? 'РАБОТАЕТ'
+        : tool.status === 'unavailable' ? 'НЕДОСТУПЕН'
+        : tool.status === 'redirected' ? 'РЕДИРЕКТ' : tool.status.toUpperCase();
+      const isUnavail = tool.status === 'unavailable';
+      const since = tool.unavailableSince
+        ? `с ${new Date(tool.unavailableSince).toLocaleDateString('ru-RU')}`
+        : '';
+
+      return `
+        <article class="card ${isUnavail ? 'unavailable' : ''} ${tool.featured ? 'featured' : ''}"
+                 data-id="${tool.id}"
+                 itemscope itemtype="https://schema.org/SoftwareApplication">
+          <div class="card-header">
+            <span class="card-name" itemprop="name">${tool.name}</span>
+            <div class="card-badges">
+              ${tool.featured ? '<span class="badge-featured">★ TOP</span>' : ''}
+              <span class="badge-status ${tool.status}">${statusLabel}</span>
+            </div>
+          </div>
+          <div class="card-origin">📍 ${tool.origin || 'Не указано'}</div>
+          <p class="card-desc" itemprop="description">${tool.description}</p>
+          <div class="card-tags">${(tool.tags||[]).map(t => `<span class="tag">#${t}</span>`).join('')}</div>
+          <a class="card-link" href="${tool.url}" target="_blank" rel="noopener" itemprop="url">
+            🔗 Открыть
+          </a>
+          <div class="unavail-note">⚠️ Временно недоступен ${since} — не удалён из базы</div>
+        </article>
+      `;
+    }).join('');
+  }
+
+  // Tabs
+  document.getElementById('tabs').addEventListener('click', e => {
+    const tab = e.target.closest('.tab');
+    if(!tab) return;
+    currentCat = tab.dataset.cat;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    render();
+  });
+
+  // Search
+  let searchTimer;
+  document.getElementById('search').addEventListener('input', e => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      searchQuery = e.target.value.trim();
+      // Reset tab to all when searching
+      currentCat = 'all';
+      document.querySelectorAll('.tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.cat === 'all');
+      });
+      render();
+    }, 250);
+  });
+
+  // URL params
+  const urlParams = new URLSearchParams(location.search);
+  if(urlParams.get('q')) document.getElementById('search').value = urlParams.get('q');
+  if(urlParams.get('cat')) currentCat = urlParams.get('cat');
+
+  loadData();
+</script>
+</body>
+</html>

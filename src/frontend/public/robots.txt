@@ -1,0 +1,20 @@
+# AI Directory — robots.txt
+# Бот работает 24/7 и обновляет список ИИ-инструментов
+
+User-agent: *
+Allow: /
+Disallow: /api/admin
+Disallow: /api/internal
+
+# Яндекс
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+Sitemap: https://ai-directory.example.com/sitemap.xml
+Sitemap: https://ai-directory.example.com/sitemap-news.xml
