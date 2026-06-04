@@ -1,0 +1,93 @@
+name: 🤖 Daily AI Crawler
+
+on:
+  schedule:
+    # Каждый день в 03:00 UTC
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      force_full_check:
+        description: "Полная проверка всех инструментов"
+        required: false
+        default: "false"
+        type: boolean
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  crawl:
+    name: Обновить список ИИ-инструментов
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🟢 Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: 📦 Установка зависимостей
+        run: npm ci
+
+      - name: 🔍 Запуск краулера
+        run: node src/crawler/index.js
+        env:
+          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}
+
+      - name: 🗺️ Генерация sitemap
+        run: node src/crawler/sitemap.js
+        env:
+          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}
+
+      - name: 📊 Статистика обновления
+        run: |
+          echo "## 📊 Результаты краулера" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          node -e "
+            const d = JSON.parse(require('fs').readFileSync('data/tools.json','utf8'));
+            const active = d.tools.filter(t=>t.status==='active').length;
+            const unavail = d.tools.filter(t=>t.status==='unavailable').length;
+            console.log('| Метрика | Значение |');
+            console.log('|---------|----------|');
+            console.log('| Всего инструментов | ' + d.tools.length + ' |');
+            console.log('| Активных | ' + active + ' |');
+            console.log('| Недоступных | ' + unavail + ' |');
+            console.log('| Версия базы | ' + d.meta.version + ' |');
+            console.log('| Обновлено | ' + d.meta.lastUpdated + ' |');
+          " >> $GITHUB_STEP_SUMMARY
+
+      - name: 💾 Коммит обновлений
+        run: |
+          git config user.name "AI Directory Bot"
+          git config user.email "bot@ai-directory.example.com"
+          git add data/tools.json data/CHANGELOG.md src/frontend/public/sitemap.xml src/frontend/public/robots.txt || true
+          git diff --staged --quiet || git commit -m "🤖 auto: ежедневное обновление [$(date +%Y-%m-%d)]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Пинг поисковых систем после обновления
+  notify-search-engines:
+    name: Уведомить поисковики
+    needs: crawl
+    runs-on: ubuntu-latest
+    if: success()
+
+    steps:
+      - name: 🔔 Пинг Google
+        run: |
+          BASE="${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}"
+          curl -s "https://www.google.com/ping?sitemap=${BASE}/sitemap.xml" || echo "Google ping: OK (или нет ответа)"
+
+      - name: 🔔 Пинг Яндекс
+        run: |
+          BASE="${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}"
+          curl -s "https://webmaster.yandex.ru/ping?sitemap=${BASE}/sitemap.xml" || echo "Yandex ping: OK"

@@ -1,0 +1,59 @@
+name: 🎆 Новогоднее обновление версии
+
+on:
+  schedule:
+    # 1 января в 00:05 UTC
+    - cron: "5 0 1 1 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  new-year-update:
+    name: Обновить версию на новый год
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: 🎆 Обновление версии и sitemap
+        run: |
+          YEAR=$(date +%Y)
+          echo "Наступил ${YEAR} год! Обновляем версию..."
+          node -e "
+            const fs = require('fs');
+            const d = JSON.parse(fs.readFileSync('data/tools.json','utf8'));
+            const year = new Date().getFullYear();
+            d.meta.version = year + '.01';
+            d.meta.lastUpdated = new Date().toISOString();
+            fs.writeFileSync('data/tools.json', JSON.stringify(d, null, 2));
+            console.log('✅ Версия обновлена до ' + year + '.01');
+          "
+          node src/crawler/sitemap.js || true
+        env:
+          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}
+
+      - name: 💾 Коммит новогоднего обновления
+        run: |
+          YEAR=$(date +%Y)
+          git config user.name "AI Directory Bot"
+          git config user.email "bot@ai-directory.example.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "🎆 С Новым ${YEAR} годом! Обновление версии базы данных"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🎊 Итог
+        run: |
+          YEAR=$(date +%Y)
+          echo "## 🎆 С Новым ${YEAR} годом!" >> $GITHUB_STEP_SUMMARY
+          echo "База данных ИИ-инструментов обновлена до версии ${YEAR}.01" >> $GITHUB_STEP_SUMMARY
