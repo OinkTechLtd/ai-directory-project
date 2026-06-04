@@ -39,7 +39,7 @@ jobs:
           "
           node src/crawler/sitemap.js || true
         env:
-          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}
+          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.tatnet.app' }}
 
       - name: 💾 Коммит новогоднего обновления
         run: |
