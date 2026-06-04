@@ -40,12 +40,12 @@ jobs:
       - name: 🔍 Запуск краулера
         run: node src/crawler/index.js
         env:
-          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}
+          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.tatnet.app' }}
 
       - name: 🗺️ Генерация sitemap
         run: node src/crawler/sitemap.js
         env:
-          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.example.com' }}
+          BASE_URL: ${{ secrets.BASE_URL || 'https://ai-directory.tatnet.app' }}
 
       - name: 📊 Статистика обновления
         run: |
