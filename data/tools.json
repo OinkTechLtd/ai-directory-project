@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-18T08:11:56.473Z",
-    "totalTools": 12,
+    "lastUpdated": "2026-06-18T11:08:03.000Z",
+    "totalTools": 13,
     "version": "2026.06",
     "crawlerStatus": "active"
   },
@@ -255,6 +255,25 @@
       "addedAt": "2025-06-01T00:00:00Z",
       "lastChecked": "2026-06-18T08:11:55.445Z",
       "featured": true
+    },
+    {
+      "id": "roblox-gui-maker",
+      "name": "Roblox GUI Maker",
+      "slug": "roblox-gui-maker",
+      "url": "https://robloxguimaker.dev/",
+      "category": "developers",
+      "tags": [
+        "roblox",
+        "ui",
+        "lua",
+        "game-dev"
+      ],
+      "description": "Бесплатный ИИ-генератор интерфейсов Roblox Studio. Создает ScreenGui-макеты и стартовый Lua-код по текстовому описанию.",
+      "status": "active",
+      "origin": "Roblox GUI Maker",
+      "addedAt": "2026-06-18T11:08:03.000Z",
+      "lastChecked": "2026-06-18T11:08:03.000Z",
+      "featured": false
     },
     {
       "id": "perplexity",
