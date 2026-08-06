@@ -5,103 +5,103 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://ai-directory.tatnet.app/</loc>
-    <lastmod>2026-08-05T05:49:17.578Z</lastmod>
+    <lastmod>2026-08-06T05:53:10.077Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/developers</loc>
-    <lastmod>2026-08-05T05:49:17.578Z</lastmod>
+    <lastmod>2026-08-06T05:53:10.077Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/users</loc>
-    <lastmod>2026-08-05T05:49:17.578Z</lastmod>
+    <lastmod>2026-08-06T05:53:10.077Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/startups</loc>
-    <lastmod>2026-08-05T05:49:17.578Z</lastmod>
+    <lastmod>2026-08-06T05:53:10.077Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/changelog</loc>
-    <lastmod>2026-08-05T05:49:17.578Z</lastmod>
+    <lastmod>2026-08-06T05:53:10.077Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/tatnet-t1000</loc>
-    <lastmod>2026-08-05T05:48:59.563Z</lastmod>
+    <lastmod>2026-08-06T05:52:51.343Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/coder-goai</loc>
-    <lastmod>2026-08-05T05:49:01.266Z</lastmod>
+    <lastmod>2026-08-06T05:52:53.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/github-copilot</loc>
-    <lastmod>2026-08-05T05:49:02.102Z</lastmod>
+    <lastmod>2026-08-06T05:52:53.892Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/cursor</loc>
-    <lastmod>2026-08-05T05:49:02.762Z</lastmod>
+    <lastmod>2026-08-06T05:52:54.537Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/claude</loc>
-    <lastmod>2026-08-05T05:49:03.304Z</lastmod>
+    <lastmod>2026-08-06T05:52:55.076Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/chatgpt</loc>
-    <lastmod>2026-08-05T05:49:03.852Z</lastmod>
+    <lastmod>2026-08-06T05:52:55.624Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/yandexgpt</loc>
-    <lastmod>2026-08-05T05:49:05.070Z</lastmod>
+    <lastmod>2026-08-06T05:52:57.057Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/gigachat</loc>
-    <lastmod>2026-08-05T05:49:06.302Z</lastmod>
+    <lastmod>2026-08-06T05:52:58.960Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/tabnine</loc>
-    <lastmod>2026-08-05T05:49:07.421Z</lastmod>
+    <lastmod>2026-08-06T05:53:00.155Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/gemini</loc>
-    <lastmod>2026-08-05T05:49:08.114Z</lastmod>
+    <lastmod>2026-08-06T05:53:00.844Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/windsurf</loc>
-    <lastmod>2026-08-05T05:49:08.861Z</lastmod>
+    <lastmod>2026-08-06T05:53:01.500Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ai-directory.tatnet.app/tool/perplexity</loc>
-    <lastmod>2026-08-05T05:49:09.539Z</lastmod>
+    <lastmod>2026-08-06T05:53:02.037Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
