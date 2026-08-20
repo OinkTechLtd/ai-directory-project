@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-19T03:49:49.542Z",
+    "lastUpdated": "2026-08-20T03:49:43.324Z",
     "totalTools": 12,
     "version": "2026.08",
     "crawlerStatus": "active"
@@ -40,7 +40,7 @@
       "status": "active",
       "origin": "Казань, Татарстан, Россия",
       "addedAt": "2026-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:40.153Z",
+      "lastChecked": "2026-08-20T03:49:33.065Z",
       "featured": true,
       "logo": "https://tatnet.dev/logo.png"
     },
@@ -61,7 +61,7 @@
       "status": "active",
       "origin": "OinkTech Ltd",
       "addedAt": "2026-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:41.651Z",
+      "lastChecked": "2026-08-20T03:49:34.720Z",
       "featured": true,
       "logo": "https://coder-goai.lovable.app/logo.png"
     },
@@ -81,7 +81,7 @@
       "status": "active",
       "origin": "Microsoft / GitHub",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:42.227Z",
+      "lastChecked": "2026-08-20T03:49:35.479Z",
       "featured": true
     },
     {
@@ -99,7 +99,7 @@
       "status": "active",
       "origin": "Anysphere",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:42.788Z",
+      "lastChecked": "2026-08-20T03:49:36.170Z",
       "featured": true
     },
     {
@@ -118,7 +118,7 @@
       "status": "unavailable",
       "origin": "Anthropic",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:43.308Z",
+      "lastChecked": "2026-08-20T03:49:36.721Z",
       "featured": true,
       "unavailableSince": "2026-06-04T23:02:47.215Z",
       "statusHistory": [
@@ -145,7 +145,7 @@
       "status": "unavailable",
       "origin": "OpenAI",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:43.825Z",
+      "lastChecked": "2026-08-20T03:49:37.254Z",
       "featured": true,
       "unavailableSince": "2026-06-04T23:02:47.759Z",
       "statusHistory": [
@@ -172,7 +172,7 @@
       "status": "active",
       "origin": "Яндекс, Россия",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:45.098Z",
+      "lastChecked": "2026-08-20T03:49:38.544Z",
       "featured": true
     },
     {
@@ -191,7 +191,7 @@
       "status": "unavailable",
       "origin": "Сбер, Россия",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:46.547Z",
+      "lastChecked": "2026-08-20T03:49:39.843Z",
       "featured": false,
       "unavailableSince": "2026-06-04T23:02:49.947Z",
       "statusHistory": [
@@ -217,7 +217,7 @@
       "status": "active",
       "origin": "Tabnine",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:47.263Z",
+      "lastChecked": "2026-08-20T03:49:40.927Z",
       "featured": false
     },
     {
@@ -235,7 +235,7 @@
       "status": "unavailable",
       "origin": "Google DeepMind",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:47.951Z",
+      "lastChecked": "2026-08-20T03:49:41.606Z",
       "featured": true,
       "unavailableSince": "2026-07-24T05:53:13.001Z",
       "statusHistory": [
@@ -261,7 +261,7 @@
       "status": "active",
       "origin": "Codeium",
       "addedAt": "2025-06-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:48.518Z",
+      "lastChecked": "2026-08-20T03:49:42.243Z",
       "featured": true
     },
     {
@@ -279,7 +279,7 @@
       "status": "active",
       "origin": "Perplexity AI",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-08-19T03:49:49.041Z",
+      "lastChecked": "2026-08-20T03:49:42.823Z",
       "featured": true
     }
   ]
