@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-27T08:46:32.714Z",
+    "lastUpdated": "2026-10-28T09:26:40.472Z",
     "totalTools": 12,
     "version": "2026.10",
     "crawlerStatus": "active"
@@ -40,7 +40,7 @@
       "status": "active",
       "origin": "Казань, Татарстан, Россия",
       "addedAt": "2026-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:20.394Z",
+      "lastChecked": "2026-10-28T09:26:22.265Z",
       "featured": true,
       "logo": "https://tatnet.dev/logo.png",
       "unavailableSince": "2026-10-24T07:58:00.977Z",
@@ -71,12 +71,20 @@
         "oinktech"
       ],
       "description": "ИИ-помощник для разработчиков от OinkTech Ltd. Умное дополнение кода и архитектурные советы.",
-      "status": "active",
+      "status": "unavailable",
       "origin": "OinkTech Ltd",
       "addedAt": "2026-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:22.429Z",
+      "lastChecked": "2026-10-28T09:26:30.835Z",
       "featured": true,
-      "logo": "https://coder-goai.lovable.app/logo.png"
+      "logo": "https://coder-goai.lovable.app/logo.png",
+      "unavailableSince": "2026-10-28T09:26:30.835Z",
+      "statusHistory": [
+        {
+          "from": "active",
+          "to": "unavailable",
+          "at": "2026-10-28T09:26:30.835Z"
+        }
+      ]
     },
     {
       "id": "github-copilot",
@@ -94,7 +102,7 @@
       "status": "active",
       "origin": "Microsoft / GitHub",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:23.090Z",
+      "lastChecked": "2026-10-28T09:26:31.839Z",
       "featured": true
     },
     {
@@ -112,7 +120,7 @@
       "status": "active",
       "origin": "Anysphere",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:23.848Z",
+      "lastChecked": "2026-10-28T09:26:32.510Z",
       "featured": true
     },
     {
@@ -131,7 +139,7 @@
       "status": "unavailable",
       "origin": "Anthropic",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:24.488Z",
+      "lastChecked": "2026-10-28T09:26:33.048Z",
       "featured": true,
       "unavailableSince": "2026-06-04T23:02:47.215Z",
       "statusHistory": [
@@ -158,7 +166,7 @@
       "status": "unavailable",
       "origin": "OpenAI",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:25.131Z",
+      "lastChecked": "2026-10-28T09:26:33.585Z",
       "featured": true,
       "unavailableSince": "2026-06-04T23:02:47.759Z",
       "statusHistory": [
@@ -185,7 +193,7 @@
       "status": "active",
       "origin": "Яндекс, Россия",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:26.540Z",
+      "lastChecked": "2026-10-28T09:26:34.911Z",
       "featured": true
     },
     {
@@ -204,7 +212,7 @@
       "status": "unavailable",
       "origin": "Сбер, Россия",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:28.828Z",
+      "lastChecked": "2026-10-28T09:26:36.998Z",
       "featured": false,
       "unavailableSince": "2026-06-04T23:02:49.947Z",
       "statusHistory": [
@@ -230,7 +238,7 @@
       "status": "active",
       "origin": "Tabnine",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:29.984Z",
+      "lastChecked": "2026-10-28T09:26:38.042Z",
       "featured": false
     },
     {
@@ -248,7 +256,7 @@
       "status": "unavailable",
       "origin": "Google DeepMind",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:30.747Z",
+      "lastChecked": "2026-10-28T09:26:38.782Z",
       "featured": true,
       "unavailableSince": "2026-07-24T05:53:13.001Z",
       "statusHistory": [
@@ -274,7 +282,7 @@
       "status": "active",
       "origin": "Codeium",
       "addedAt": "2025-06-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:31.536Z",
+      "lastChecked": "2026-10-28T09:26:39.416Z",
       "featured": true
     },
     {
@@ -292,7 +300,7 @@
       "status": "active",
       "origin": "Perplexity AI",
       "addedAt": "2025-01-01T00:00:00Z",
-      "lastChecked": "2026-10-27T08:46:32.214Z",
+      "lastChecked": "2026-10-28T09:26:39.972Z",
       "featured": true
     }
   ]
